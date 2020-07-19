@@ -4,8 +4,6 @@ require_relative "./octokit_client"
 
 class Runner
   ## constants
-  WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud.png'
-  WORD_LIST_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordlist.txt'
   MARKDOWN_PATH = 'README.md'
   REGEX_PATTERN = /\w[\w' ]+/
 
@@ -49,7 +47,7 @@ class Runner
 
   def generate_cloud(word)
     `echo #{word} >> wordcloud/wordlist.txt`
-    `wordcloud_cli --text wordcloud/wordlist.txt --imagefile ./wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "#{REGEX_PATTERN}" --no_collocations --min_font_size 10 --max_font_size 120`
+    `wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "#{REGEX_PATTERN}" --no_collocations --min_font_size 10 --max_font_size 120`
   end
 
   def write(word)
@@ -65,7 +63,7 @@ class Runner
       #   sha: raw_markdown_data.sha,
       #   content: to_markdown,
       # )
-      `git add README.md wordcloud.png wordcloud/wordlist.txt`
+      `git add README.md wordcloud/wordcloud.png wordcloud/wordlist.txt`
       `git diff`
       `git config --global user.email "github-action-bot@example.com"`
       `git config --global user.name "GitHub Action Bot"`

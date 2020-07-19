@@ -1,7 +1,5 @@
 class ReadmeGenerator
-  WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud.png'
-  WORD_LIST_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordlist.txt'
-  ISSUE_BASE_URL = 'https://github.com/JessicaLim8/JessicaLim8/issues/new'
+  WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
 
   def initialize(octokit:)
     @octokit = octokit
@@ -38,7 +36,7 @@ class ReadmeGenerator
       ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-blue?labelColor=7D898B)
       ![](https://img.shields.io/badge/Total%20Contributors-#{contributors.size}-orange?labelColor=7D898B)
 
-      **Add your own personal twist to my *Community Word Cloud* [here](#{ISSUE_BASE_URL}?title=wordcloud%7INSERTWORDHERE%7&body=Test).**
+      **Add your own personal twist to my *Community Word Cloud* [here](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27).**
 
       The *Word Cloud* will automatically update when you add your own word 😊 The prompt will change frequently, so be sure to come back and check it out!
 
@@ -53,12 +51,11 @@ class ReadmeGenerator
 
         ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
         ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
-        [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
-        [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
-        [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
 
       </div>
     HTML
+
+    # TODO: [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
 
     markdown
   end
