@@ -37,7 +37,11 @@ class Runner
     end
 
     # Create new word cloud
-    generate_cloud(word)
+    result = generate_cloud(word)
+    unless result
+      comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
+      octokit.error_notification(reaction: 'confused', comment: comment)
+    end
 
     # write to readme
     write(word)
@@ -47,7 +51,7 @@ class Runner
 
   def generate_cloud(word)
     `echo #{word} >> wordcloud/wordlist.txt`
-    `wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "#{REGEX_PATTERN}" --no_collocations --min_font_size 10 --max_font_size 120`
+    system('wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' ]+" --no_collocations --min_font_size 10 --max_font_size 120')
   end
 
   def write(word)
