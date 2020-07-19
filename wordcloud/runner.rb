@@ -53,19 +53,24 @@ class Runner
   end
 
   def write(word)
-    message = "@#{@user} added #{word} to the Word Cloud"
+    message = "@#{@user} added '#{word}' to the Word Cloud"
 
+    File.write(MARKDOWN_PATH, to_markdown)
     if @development
-      File.write(MARKDOWN_PATH, to_markdown)
       puts message
     else
-      File.write(MARKDOWN_PATH, to_markdown)
       # octokit.write_to_repo(
       #   filepath: MARKDOWN_PATH,
       #   message: message,
       #   sha: raw_markdown_data.sha,
       #   content: to_markdown,
       # )
+      `git add README.md wordcloud.png wordcloud/wordlist.txt`
+      `git diff`
+      `git config --global user.email "github-action-bot@example.com"`
+      `git config --global user.name "GitHub Action Bot"`
+      `git commit -m "#{message}" -a || echo "No changes to commit"`
+      `git push`
       octokit.add_reaction(reaction: 'rocket')
     end
   end

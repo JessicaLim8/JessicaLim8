@@ -48,12 +48,3 @@ jobs:
           ).run
 
         EORUBY
-        
-    - name: Update Image and Word List
-      run: |
-        git add README.md wordcloud.png wordcloud/wordlist.txt
-        git diff
-        git config --global user.email "github-action-bot@example.com"
-        git config --global user.name "GitHub Action Bot"
-        git commit -m "Update Wordcloud" -a || echo "No changes to commit"
-        git push
