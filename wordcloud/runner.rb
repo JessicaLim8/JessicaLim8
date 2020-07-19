@@ -25,7 +25,7 @@ class Runner
 
   def run
     split_input = @issue_title.split('|')
-    word = split_input[1]
+    word = split_input[1].downcase
 
     acknowledge_issue
 

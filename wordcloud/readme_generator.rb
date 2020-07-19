@@ -27,10 +27,10 @@ class ReadmeGenerator
       [![Instagram Badge](https://img.shields.io/badge/-@jlim__slam-purple?style=flat&logo=instagram&logoColor=white&link=https://instagram.com/jlim_slam/)](https://instagram.com/jlim_slam)
       [![Gmail Badge](https://img.shields.io/badge/-jessicalim813-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:jessicalim813@gmail.com)](mailto:jessicalim813@gmail.com)
 
-      Welcome to my profile! I'm a student, aspiring writer, part-time coder and full-time adventure seeker. Thanks for checking out my repo, and I'd love to [connect](https://www.linkedin.com/in/jlim/)!
+      Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jessicalim), part-time coder and full-time adventure seeker. Thanks for visiting and I'd love to [connect](https://www.linkedin.com/in/jlim/)!
 
 
-      ## Join my community word cloud 🔡 💭
+      ## Join my community Word Cloud :cloud: :pencil2:
 
       ![](https://img.shields.io/badge/Words%20Added-#{total_words_added}-brightgreen?labelColor=7D898B)
       ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-blue?labelColor=7D898B)
