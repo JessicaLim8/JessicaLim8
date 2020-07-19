@@ -9,3 +9,4 @@ test
 keyboards
 listening to music
 drink water
+Rubik cubes
