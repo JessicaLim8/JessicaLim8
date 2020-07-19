@@ -11,9 +11,9 @@ Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jes
 
 ## Join my community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-4-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-5-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-1-blue?labelColor=7D898B)
-![](https://img.shields.io/badge/Total%20Contributors-2-orange?labelColor=7D898B)
+![](https://img.shields.io/badge/Total%20Contributors-3-orange?labelColor=7D898B)
 
 **Add your own personal twist to my *Community Word Cloud* [here](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27).**
 
@@ -28,7 +28,7 @@ The *Word Cloud* will automatically update when you add your own word 😊 The p
 
   &nbsp;
 
-  ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-4-darkblue?labelColor=7D898B)
-  ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-2-orange?labelColor=7D898B)
+  ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-5-darkblue?labelColor=7D898B)
+  ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-3-orange?labelColor=7D898B)
 
 </div>
