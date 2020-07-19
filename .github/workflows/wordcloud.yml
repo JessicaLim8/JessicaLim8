@@ -51,7 +51,7 @@ jobs:
         
     - name: Update Image and Word List
       run: |
-        git add wordcloud.png wordcloud/wordlist.txt
+        git add README.md wordcloud.png wordcloud/wordlist.txt
         git diff
         git config --global user.email "github-action-bot@example.com"
         git config --global user.name "GitHub Action Bot"

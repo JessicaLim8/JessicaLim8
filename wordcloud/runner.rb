@@ -59,12 +59,12 @@ class Runner
       File.write(MARKDOWN_PATH, to_markdown)
       puts message
     else
-      octokit.write_to_repo(
-        filepath: MARKDOWN_PATH,
-        message: message,
-        sha: raw_markdown_data.sha,
-        content: to_markdown,
-      )
+      # octokit.write_to_repo(
+      #   filepath: MARKDOWN_PATH,
+      #   message: message,
+      #   sha: raw_markdown_data.sha,
+      #   content: to_markdown,
+      # )
       octokit.add_reaction(reaction: 'rocket')
     end
   end
