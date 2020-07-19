@@ -47,7 +47,7 @@ class ReadmeGenerator
 
         &nbsp;
 
-        <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/wordcloud-template/wordcloud.png" alt="WordCloud" width="100%">
+        <img src="#{WORD_CLOUD_URL}" alt="WordCloud" width="100%">
 
         &nbsp;
 
