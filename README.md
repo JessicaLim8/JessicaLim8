@@ -11,7 +11,7 @@ Welcome to my profile! I'm a student, aspiring writer, part-time coder and full-
 
 ## Join my community word cloud 🔡 💭
 
-![](https://img.shields.io/badge/Words%20Added-5-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-6-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-1-blue?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Contributors-1-orange?labelColor=7D898B)
 
@@ -24,11 +24,11 @@ The *Word Cloud* will automatically update when you add your own word 😊 The p
 
   &nbsp;
 
-  <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/wordcloud-template/wordcloud.png" alt="WordCloud" width="100%">
+  <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud.png" alt="WordCloud" width="100%">
 
   &nbsp;
 
-  ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-5-darkblue?labelColor=7D898B)
+  ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-6-darkblue?labelColor=7D898B)
   ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-1-orange?labelColor=7D898B)
   [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
   [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
