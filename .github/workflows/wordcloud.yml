@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  move:
+  addWord:
     runs-on: ubuntu-latest
     if: startsWith(github.event.issue.title, 'wordcloud|')
     steps:
