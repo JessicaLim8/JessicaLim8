@@ -1,5 +1,3 @@
-require_relative './game'
-
 class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud.png'
   WORD_LIST_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordlist.txt'
@@ -52,6 +50,7 @@ class ReadmeGenerator
         <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/wordcloud-template/wordcloud.png" alt="WordCloud" width="100%">
 
         &nbsp;
+
         ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
         ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
         [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)

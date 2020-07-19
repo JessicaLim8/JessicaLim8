@@ -1,5 +1,4 @@
 ##imports
-
 require_relative "./readme_generator"
 require_relative "./octokit_client"
 
@@ -8,7 +7,7 @@ class Runner
   ## constants
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud.png'
   WORD_LIST_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordlist.txt'
-  MARKDOWN_PATH = 'README.md'
+  MARKDOWN_PATH = '../README.md'
   REGEX_PATTERN = /\w[\w' ]+/
 
   def initialize(
