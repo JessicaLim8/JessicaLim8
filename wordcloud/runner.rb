@@ -59,6 +59,7 @@ class Runner
       File.write(MARKDOWN_PATH, to_markdown)
       puts message
     else
+      File.write(MARKDOWN_PATH, to_markdown)
       # octokit.write_to_repo(
       #   filepath: MARKDOWN_PATH,
       #   message: message,
