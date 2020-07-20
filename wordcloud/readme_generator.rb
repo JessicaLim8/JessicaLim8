@@ -38,7 +38,7 @@ class ReadmeGenerator
 
       ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
-      A new word cloud will be automatically generated when you add your own word. The prompt will change frequently, so be sure to come back and check it out :relaxed:
+      A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27). The prompt will change frequently, so be sure to come back and check it out :relaxed:
 
       <div align="center">
         <h2>Favourite Quarantine Passtime? :lock: :video_game: :runner: </h2>
