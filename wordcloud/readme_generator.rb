@@ -33,24 +33,23 @@ class ReadmeGenerator
       ## Join the Community Word Cloud :cloud: :pencil2:
 
       ![](https://img.shields.io/badge/Words%20Added-#{total_words_added}-brightgreen?labelColor=7D898B)
-      ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-blue?labelColor=7D898B)
-      ![](https://img.shields.io/badge/Total%20Contributors-#{contributors.size}-orange?labelColor=7D898B)
+      ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-48D6FF?labelColor=7D898B)
+      ![](https://img.shields.io/badge/Total%20Contributors-#{contributors.size}-AC6EFF?labelColor=7D898B)
 
       ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
       A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27). The prompt will change frequently, so be sure to come back and check it out :relaxed:
 
       <div align="center">
-        <h2>Favourite Quarantine Passtime? :lock: :video_game: :runner: </h2>
 
-        &nbsp;
+        ## *Favourite Quarantine Passtime?* :lock: :tennis: :video_game:
 
         <img src="#{WORD_CLOUD_URL}" alt="WordCloud" width="100%">
 
-        &nbsp;
+        ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-informational?labelColor=7D898B)
+        ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-blueviolet?labelColor=7D898B)
 
-        ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
-        ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
+
     HTML
 
     # TODO: [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
