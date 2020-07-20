@@ -51,16 +51,22 @@ class ReadmeGenerator
 
         ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
         ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
-
-      </div>
     HTML
 
     # TODO: [![Github Badge](https://img.shields.io/badge/-@username-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/username)](https://github.com/username)
 
-    markdown
+    contributors.each do |username, count|
+      markdown.concat("[![Github Badge](https://img.shields.io/badge/-@#{format_username(username)}-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/#{username})](https://github.com/#{username}) ")
+    end
+
+    markdown.concat("</div>")
   end
 
   private
+
+  def format_username(name)
+      name.gsub('-', '--')
+  end
 
   attr_reader :octokit
 end
