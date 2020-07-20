@@ -30,18 +30,18 @@ class ReadmeGenerator
       Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jessicalim), part-time coder and full-time adventure seeker. Thanks for visiting and I'd love to [connect](https://www.linkedin.com/in/jlim/)!
 
 
-      ## Join my community Word Cloud :cloud: :pencil2:
+      ## Join the Community Word Cloud :cloud: :pencil2:
 
       ![](https://img.shields.io/badge/Words%20Added-#{total_words_added}-brightgreen?labelColor=7D898B)
       ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-blue?labelColor=7D898B)
       ![](https://img.shields.io/badge/Total%20Contributors-#{contributors.size}-orange?labelColor=7D898B)
 
-      **Add your own personal twist to my *Community Word Cloud* [here](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27).**
+      ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
-      The *Word Cloud* will automatically update when you add your own word 😊 The prompt will change frequently, so be sure to come back and check it out!
+      A new word cloud will be automatically generated when you add your own word. The prompt will change frequently, so be sure to come back and check it out :relaxed:
 
       <div align="center">
-        <h2>Favourite Quarantine Passtime?</h2>
+        <h2>Favourite Quarantine Passtime? :lock: :video_game: :runner: </h2>
 
         &nbsp;
 
@@ -49,8 +49,8 @@ class ReadmeGenerator
 
         &nbsp;
 
-        ![Monthly Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
-        ![Monthly Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
+        ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-#{current_words_added}-darkblue?labelColor=7D898B)
+        ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-#{current_contributors}-orange?labelColor=7D898B)
 
       </div>
     HTML
