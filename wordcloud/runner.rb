@@ -31,15 +31,25 @@ class Runner
 
     # TODO: Check if word is valid
 
-    unless REGEX_PATTERN.match?(word)
-      comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
-      octokit.error_notification(reaction: 'confused', comment: comment)
+    unless word[REGEX_PATTERN] == (word)
+      # Check to see if the person accidentally included the <>
+      if word[REGEX_PATTERN] == word[1..-2] && word[0] == "<" && word[-1] == ">"
+        word = word[1..-2]
+      else
+        # Invalid expression, did not pass regex
+        comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
+        octokit.error_notification(reaction: 'confused', comment: comment)
+      end
     end
+
+    # Check for spaced
+    word = word.gsub("_", " ")
 
     # Create new word cloud
     result = generate_cloud(word)
+    # Failed cloud generation
     unless result
-      comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
+      comment = "Sorry, something went wrong... the word cloud did not update :("
       octokit.error_notification(reaction: 'confused', comment: comment)
     end
 
