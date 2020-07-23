@@ -14,3 +14,4 @@ exp
 gaming
 learning
 sleeping
+coding
