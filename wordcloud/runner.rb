@@ -91,7 +91,7 @@ class Runner
       `git add README.md wordcloud/wordcloud.png wordcloud/wordlist.txt`
       `git diff`
       `git config --global user.email "github-action-bot@example.com"`
-      `git config --global user.name "GitHub Action Bot"`
+      `git config --global user.name "github-actions[bot]"`
       `git commit -m "#{message}" -a || echo "No changes to commit"`
       `git push`
       octokit.add_reaction(reaction: 'rocket')
