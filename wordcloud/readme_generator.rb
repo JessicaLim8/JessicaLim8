@@ -1,5 +1,3 @@
-require 'byebug'
-
 class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
   ADDWORD = 'add'
