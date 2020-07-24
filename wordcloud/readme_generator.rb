@@ -10,6 +10,7 @@ class ReadmeGenerator
     contributors = Hash.new(0)
     current_contributors = Hash.new(0)
     total_words_added = 0
+    current_words_added = 0
     total_clouds = 1 # Hardcoded value
 
     octokit.issues.each do |issue|
