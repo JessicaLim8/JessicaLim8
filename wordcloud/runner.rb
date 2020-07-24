@@ -6,6 +6,8 @@ class Runner
   ## constants
   MARKDOWN_PATH = 'README.md'
   REGEX_PATTERN = /\w[\w' ]+/
+  ADDWORD = 'add'
+  SHUFFLECLOUD = 'shuffle'
 
   def initialize(
     github_token:,
@@ -25,12 +27,30 @@ class Runner
 
   def run
     split_input = @issue_title.split('|')
-    word = split_input[1].downcase
+    command = split_input[1]
+    word = split_input[2]
 
     acknowledge_issue
 
-    # TODO: Check if word is valid
+    if command == SHUFFLECLOUD
+      generate_cloud()
+      message = "@#{@user} regenerated the Word Cloud"
+    elsif command == ADDWORD && !word.nil?
+      add_to_wordlist(word)
+      generate_cloud
+      message = "@#{@user} added '#{word}' to the Word Cloud"
+      # write to readme
+    else
+      comment = "Sorry, your command was not valid :( Please try again"
+      octokit.error_notification(reaction: 'confused', comment: comment)
+    end
 
+      write(message)
+  end
+
+  private
+  def add_to_wordlist(word)
+    #Check valid word
     unless word[REGEX_PATTERN] == (word)
       # Check to see if the person accidentally included the <>
       if word[REGEX_PATTERN] == word[1..-2] && word[0] == "<" && word[-1] == ">"
@@ -42,41 +62,28 @@ class Runner
       end
     end
 
-    # Check for spaced
+    # Check for spaces
     word = word.gsub("_", " ")
+    # Add word to list
+    `echo #{word} >> wordcloud/wordlist.txt`
+  end
 
+  def generate_cloud()
     # Create new word cloud
-    result = generate_cloud(word)
+    result = system('wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' ]+" --no_collocations --min_font_size 10 --max_font_size 120')
     # Failed cloud generation
     unless result
       comment = "Sorry, something went wrong... the word cloud did not update :("
       octokit.error_notification(reaction: 'confused', comment: comment)
     end
-
-    # write to readme
-    write(word)
+    result
   end
 
-  private
-
-  def generate_cloud(word)
-    `echo #{word} >> wordcloud/wordlist.txt`
-    system('wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' ]+" --no_collocations --min_font_size 10 --max_font_size 120')
-  end
-
-  def write(word)
-    message = "@#{@user} added '#{word}' to the Word Cloud"
-
+  def write(message)
     File.write(MARKDOWN_PATH, to_markdown)
     if @development
       puts message
     else
-      # octokit.write_to_repo(
-      #   filepath: MARKDOWN_PATH,
-      #   message: message,
-      #   sha: raw_markdown_data.sha,
-      #   content: to_markdown,
-      # )
       `git add README.md wordcloud/wordcloud.png wordcloud/wordlist.txt`
       `git diff`
       `git config --global user.email "github-action-bot@example.com"`
