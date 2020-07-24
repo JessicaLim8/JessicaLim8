@@ -1,7 +1,6 @@
 writing
 puzzles
 music
-music
 video games
 running
 thinking
@@ -13,3 +12,6 @@ coding
 hello_world
 exp
 gaming
+learning
+sleeping
+coding
