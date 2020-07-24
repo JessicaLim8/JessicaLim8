@@ -16,8 +16,8 @@ class ReadmeGenerator
 
     octokit.issues.each do |issue|
       contributors[issue.user.login] += 1
-      total_words_added += 1
       if issue.title = ADDWORD
+        total_words_added += 1
         current_words_added += 1
         current_contributors[issue.user.login] += 1
       end
