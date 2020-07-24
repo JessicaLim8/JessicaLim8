@@ -36,7 +36,7 @@ class Runner
       generate_cloud
       message = "@#{@user} regenerated the Word Cloud"
     elsif command == ADDWORD
-      add_to_wordlist(word)
+      word = add_to_wordlist(word)
       generate_cloud
       message = "@#{@user} added '#{word}' to the Word Cloud"
       # write to readme
@@ -46,6 +46,10 @@ class Runner
     end
 
     write(message)
+
+  rescue StandardError => e
+    comment = "There seems to be an error. Sorry about that."
+    octokit.error_notification(reaction: 'confused', comment: comment, error: e)
   end
 
   private
@@ -53,7 +57,7 @@ class Runner
     #Check valid word
     invalid_word_error if word.nil?
     if word[REGEX_PATTERN] != word
-      if word[REGEX_PATTERN] == word[1..-2] && word[1..-2] > 2 && word[0] == "<" && word[-1] == ">"
+      if word[REGEX_PATTERN] == word[1..-2] && word[1..-2].length > 2 && word[0] == "<" && word[-1] == ">"
         word = word[1..-2].downcase
       else
         invalid_word_error
@@ -64,6 +68,7 @@ class Runner
     word = word.gsub("_", " ")
     # Add word to list
     `echo #{word} >> wordcloud/wordlist.txt`
+    word
   end
 
   def invalid_word_error
