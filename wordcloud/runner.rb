@@ -32,10 +32,10 @@ class Runner
 
     acknowledge_issue
 
-    if command == SHUFFLECLOUD
-      generate_cloud()
+    if command == SHUFFLECLOUD && word.nil?
+      generate_cloud
       message = "@#{@user} regenerated the Word Cloud"
-    elsif command == ADDWORD && !word.nil?
+    elsif command == ADDWORD
       add_to_wordlist(word)
       generate_cloud
       message = "@#{@user} added '#{word}' to the Word Cloud"
@@ -45,20 +45,18 @@ class Runner
       octokit.error_notification(reaction: 'confused', comment: comment)
     end
 
-      write(message)
+    write(message)
   end
 
   private
   def add_to_wordlist(word)
     #Check valid word
-    unless word[REGEX_PATTERN] == (word)
-      # Check to see if the person accidentally included the <>
-      if word[REGEX_PATTERN] == word[1..-2] && word[0] == "<" && word[-1] == ">"
-        word = word[1..-2]
+    invalid_word_error if word.nil?
+    if word[REGEX_PATTERN] != word
+      if word[REGEX_PATTERN] == word[1..-2] && word[1..-2] > 2 && word[0] == "<" && word[-1] == ">"
+        word = word[1..-2].downcase
       else
-        # Invalid expression, did not pass regex
-        comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
-        octokit.error_notification(reaction: 'confused', comment: comment)
+        invalid_word_error
       end
     end
 
@@ -68,7 +66,13 @@ class Runner
     `echo #{word} >> wordcloud/wordlist.txt`
   end
 
-  def generate_cloud()
+  def invalid_word_error
+    # Invalid expression, did not pass regex
+    comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
+    octokit.error_notification(reaction: 'confused', comment: comment)
+  end
+
+  def generate_cloud
     # Create new word cloud
     result = system('wordcloud_cli --text wordcloud/wordlist.txt --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' ]+" --no_collocations --min_font_size 10 --max_font_size 120')
     # Failed cloud generation
