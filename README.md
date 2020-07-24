@@ -15,9 +15,11 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-1-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Contributors-13-AC6EFF?labelColor=7D898B)
 
-### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
+### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7Cadd%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
-A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27). The prompt will change frequently, so be sure to come back and check it out :relaxed:
+A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7Cadd%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27). The prompt will change frequently, so be sure to come back and check it out :relaxed:
+
+:star2: Don't like the arrangement of the current word cloud? [Regenerate it](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7Cshuffle&body=Just+click+%27Submit+new+issue%27%0D%0AYou+do+not+need+to+do+anything+else) :game_die:
 
 <div align="center">
 
