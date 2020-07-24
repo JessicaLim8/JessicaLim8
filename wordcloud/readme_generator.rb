@@ -1,3 +1,5 @@
+require 'byebug'
+
 class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
   ADDWORD = 'add'
@@ -8,15 +10,15 @@ class ReadmeGenerator
   end
 
   def generate
-    contributors = Hash.new(0)
+    participants = Hash.new(0)
     current_contributors = Hash.new(0)
     total_words_added = 0
     current_words_added = 0
     total_clouds = 1 # Hardcoded value
 
     octokit.issues.each do |issue|
-      contributors[issue.user.login] += 1
-      if issue.title = ADDWORD
+      participants[issue.user.login] += 1
+      if issue.title.split('|')[1] != SHUFFLECLOUD
         total_words_added += 1
         current_words_added += 1
         current_contributors[issue.user.login] += 1
@@ -39,7 +41,7 @@ class ReadmeGenerator
 
       ![](https://img.shields.io/badge/Words%20Added-#{total_words_added}-brightgreen?labelColor=7D898B)
       ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-48D6FF?labelColor=7D898B)
-      ![](https://img.shields.io/badge/Total%20Contributors-#{contributors.size}-AC6EFF?labelColor=7D898B)
+      ![](https://img.shields.io/badge/Total%20Participants-#{participants.size}-AC6EFF?labelColor=7D898B)
 
       ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C#{ADDWORD}%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
