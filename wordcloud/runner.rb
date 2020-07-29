@@ -41,7 +41,7 @@ class Runner
       message = "@#{@user} added '#{word}' to the Word Cloud"
       # write to readme
     else
-      comment = "Sorry, the command 'wordcloud|#{command}' is not valid.%0APlease try 'wordcloud|add|your-word' or 'wordcloud|shuffle'"
+      comment = "Sorry, the command 'wordcloud|#{command}' is not valid. Please try 'wordcloud|add|your-word' or 'wordcloud|shuffle'"
       octokit.error_notification(reaction: 'confused', comment: comment)
     end
 
