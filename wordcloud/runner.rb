@@ -5,7 +5,7 @@ require_relative "./octokit_client"
 class Runner
   ## constants
   MARKDOWN_PATH = 'README.md'
-  REGEX_PATTERN = /\w[\w' ]+/
+  REGEX_PATTERN = /\w[\w' !?#@+-]+/
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
 
@@ -67,7 +67,7 @@ class Runner
     # Check for spaces
     word = word.gsub("_", " ")
     # Add word to list
-    `echo #{word} >> wordcloud/wordlist.txt`
+    File.write('wordcloud/wordlist.txt', word, File.size('wordcloud/wordlist.txt'), mode: 'a')
     word
   end
 
@@ -79,7 +79,7 @@ class Runner
 
   def generate_cloud
     # Create new word cloud
-    result = system('sort -R wordcloud/wordlist.txt | wordcloud_cli --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' ]+" --no_collocations --min_font_size 10 --max_font_size 120')
+    result = system('sort -R wordcloud/wordlist.txt | wordcloud_cli --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' !?#@+-]+" --no_collocations --min_font_size 10 --max_font_size 120')
     # Failed cloud generation
     unless result
       comment = "Sorry, something went wrong... the word cloud did not update :("
