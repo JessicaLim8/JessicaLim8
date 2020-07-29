@@ -3,8 +3,9 @@ class ReadmeGenerator
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
 
-  def initialize(octokit:)
+  def initialize(octokit:, label_list:)
     @octokit = octokit
+    @label_list = label_list
   end
 
   def generate
@@ -12,14 +13,16 @@ class ReadmeGenerator
     current_contributors = Hash.new(0)
     total_words_added = 0
     current_words_added = 0
-    total_clouds = 1 # Hardcoded value
+    total_clouds = @label_list.length # Hardcoded value
 
     octokit.issues.each do |issue|
       participants[issue.user.login] += 1
-      if issue.title.split('|')[1] != SHUFFLECLOUD
+      if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| @label_list.include?(label.name) }
         total_words_added += 1
-        current_words_added += 1
-        current_contributors[issue.user.login] += 1
+        if issue.labels.any? { |label| label.name == @label_list[-1] }
+          current_words_added += 1
+          current_contributors[issue.user.login] += 1
+        end
       end
     end
 

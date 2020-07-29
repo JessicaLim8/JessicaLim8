@@ -8,6 +8,7 @@ class Runner
   REGEX_PATTERN = /\w[\w' !?#@+-]+/
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
+  CLOUDTYPES = ['quarantine']
 
   def initialize(
     github_token:,
@@ -39,7 +40,7 @@ class Runner
       word = add_to_wordlist(word)
       generate_cloud
       message = "@#{@user} added '#{word}' to the Word Cloud"
-      # write to readme
+      octokit.add_label(label: CLOUDTYPES[-1])
     else
       comment = "Sorry, the command 'wordcloud|#{command}' is not valid. Please try 'wordcloud|add|your-word' or 'wordcloud|shuffle'"
       octokit.error_notification(reaction: 'confused', comment: comment)
@@ -106,7 +107,7 @@ class Runner
   end
 
   def to_markdown
-    ReadmeGenerator.new(octokit: octokit).generate
+    ReadmeGenerator.new(octokit: octokit, label_list: CLOUDTYPES).generate
   end
 
   def acknowledge_issue
