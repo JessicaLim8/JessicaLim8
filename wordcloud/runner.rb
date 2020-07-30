@@ -67,7 +67,9 @@ class Runner
     # Check for spaces
     word = word.gsub("_", " ")
     # Add word to list
-    File.write('wordcloud/wordlist.txt', word, File.size('wordcloud/wordlist.txt'), mode: 'a')
+    open('wordcloud/wordlist.txt', 'a') do |f|
+      f.puts word
+    end
     word
   end
 
