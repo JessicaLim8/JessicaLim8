@@ -2,7 +2,7 @@ class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
-  CLOUDTYPES = ['quarantine']
+  CLOUDTYPES = %w(quarantine)
 
   def initialize(octokit:)
     @octokit = octokit

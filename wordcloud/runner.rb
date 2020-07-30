@@ -8,7 +8,7 @@ class Runner
   REGEX_PATTERN = /\w[\w' !?#@+-]+/
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
-  CLOUDTYPES = ['quarantine']
+  CLOUDTYPES = %w(quarantine)
 
   def initialize(
     github_token:,
