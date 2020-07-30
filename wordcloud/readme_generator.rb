@@ -2,6 +2,7 @@ class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
+  CLOUDTYPES = %w(quarantine)
 
   def initialize(octokit:)
     @octokit = octokit
@@ -12,14 +13,16 @@ class ReadmeGenerator
     current_contributors = Hash.new(0)
     total_words_added = 0
     current_words_added = 0
-    total_clouds = 1 # Hardcoded value
+    total_clouds = CLOUDTYPES.length
 
     octokit.issues.each do |issue|
       participants[issue.user.login] += 1
-      if issue.title.split('|')[1] != SHUFFLECLOUD
+      if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| CLOUDTYPES.include?(label.name) }
         total_words_added += 1
-        current_words_added += 1
-        current_contributors[issue.user.login] += 1
+        if issue.labels.any? { |label| label.name == CLOUDTYPES.last }
+          current_words_added += 1
+          current_contributors[issue.user.login] += 1
+        end
       end
     end
 
