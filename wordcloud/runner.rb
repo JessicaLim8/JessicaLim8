@@ -56,26 +56,6 @@ class Runner
     octokit.error_notification(reaction: 'confused', comment: comment, error: e)
   end
 
-
-  def test_cloud
-    message = "This is a test message"
-    if @development
-      puts message
-    else
-      `git add previous_clouds/`
-      `git diff`
-      `git config --global user.email "github-action-bot@example.com"`
-      `git config --global user.name "github-actions[bot]"`
-      `git commit -m "Add previous clouds" -a || echo "No changes to commit"`
-      `git push`
-    end
-    octokit.add_comment(comment: message)
-
-  rescue StandardError => e
-    comment = "Automatic Pull Request Comment could not be executed"
-    octokit.error_notification(reaction: 'confused', comment: comment, error: e)
-  end
-
   def new_cloud
     if @user == USER
       move_old_cloud
@@ -112,7 +92,7 @@ class Runner
 
   def create_new_cloud
     new_words = octokit.get_pull_request.body.split.grep(PERSONAL_REGEX).join("\n")
-    File.write('wordcloud/wordlist.txt', new_words)
+    File.open('wordcloud/wordlist.txt', 'w') { |file| file.puts new_words }
     generate_cloud
     write("New '#{CloudTypes::CLOUDLABELS.last}' word cloud generated")
   end

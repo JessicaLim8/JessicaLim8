@@ -45,6 +45,6 @@ jobs:
             issue_title: '${{ github.event.pull_request.title }}',
             repository: ENV.fetch('REPOSITORY'),
             user: ENV.fetch('EVENT_USER_LOGIN'),
-          ).test_cloud
+          ).new_cloud
 
         EORUBY

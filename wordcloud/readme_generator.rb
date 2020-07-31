@@ -5,6 +5,7 @@ class ReadmeGenerator
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
   INITIAL_COUNT = 3
+  USER = "JessicaLim8"
 
   def initialize(octokit:)
     @octokit = octokit
@@ -16,6 +17,9 @@ class ReadmeGenerator
     current_words_added = INITIAL_COUNT
     total_clouds = CloudTypes::CLOUDLABELS.length
     total_words_added = INITIAL_COUNT * total_clouds
+
+    participants[USER] += 1
+    current_contributors[USER] += 1
 
     octokit.issues.each do |issue|
       participants[issue.user.login] += 1
@@ -70,7 +74,7 @@ class ReadmeGenerator
       markdown.concat("[![Github Badge](https://img.shields.io/badge/-@#{format_username(username)}-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/#{username})](https://github.com/#{username}) ")
     end
 
-    #TODO: markdown.concat("Check out the last word cloud to see our community's [#{CloudTypes::CLOUDPROMPTS[-2]}](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 2}.png)")
+    markdown.concat("\n\n Check out the [previous word cloud](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png) to see our community's **#{CloudTypes::CLOUDPROMPTS[-2]}**")
 
     markdown.concat("</div>")
   end
