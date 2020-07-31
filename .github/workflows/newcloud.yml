@@ -5,9 +5,9 @@ on:
     types: [closed]
 
 jobs:
-  addWord:
+  newCloud:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'New Word Cloud')
+    if: startsWith(github.event.pull_request.title, 'New Word Cloud')
     steps:
 
     - name: Checkout
@@ -42,7 +42,7 @@ jobs:
           Runner.new(
             github_token: '${{ secrets.GITHUB_TOKEN }}',
             issue_number: ENV.fetch('EVENT_ISSUE_NUMBER'),
-            issue_title: '${{ github.event.issue.title }}',
+            issue_title: '${{ github.event.pull_request.title }}',
             repository: ENV.fetch('REPOSITORY'),
             user: ENV.fetch('EVENT_USER_LOGIN'),
           ).test_cloud
