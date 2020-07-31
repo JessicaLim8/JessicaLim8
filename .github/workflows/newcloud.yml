@@ -16,8 +16,8 @@ jobs:
     - name: Set env vars
       run: |
         echo ::set-env name=REPOSITORY::${{ github.repository }}
-        echo ::set-env name=EVENT_ISSUE_NUMBER::${{ github.event.issue.number }}
-        echo ::set-env name=EVENT_USER_LOGIN::${{ github.event.issue.user.login }}
+        echo ::set-env name=EVENT_PR_NUMBER::${{ github.event.pull_request.number }}
+        echo ::set-env name=EVENT_USER_LOGIN::${{ github.event.pull_request.user.login }}
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -34,14 +34,14 @@ jobs:
         gem install octokit -N --silent
         pip install wordcloud
 
-    - name: Generate New Word Cloud
+    - name: New Word Cloud Generation
       run: |
         ruby <<- EORUBY
           require './wordcloud/runner'
           
           Runner.new(
             github_token: '${{ secrets.GITHUB_TOKEN }}',
-            issue_number: ENV.fetch('EVENT_ISSUE_NUMBER'),
+            issue_number: ENV.fetch('EVENT_PR_NUMBER'),
             issue_title: '${{ github.event.pull_request.title }}',
             repository: ENV.fetch('REPOSITORY'),
             user: ENV.fetch('EVENT_USER_LOGIN'),
