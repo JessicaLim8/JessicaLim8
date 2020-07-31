@@ -1,14 +1,17 @@
 ##imports
 require_relative "./readme_generator"
+require_relative "./comment_generator"
 require_relative "./octokit_client"
+require_relative "./cloud_types"
 
 class Runner
   ## constants
   MARKDOWN_PATH = 'README.md'
   REGEX_PATTERN = /\w[\w' !?#@+-]+/
+  PERSONAL_REGEX = /`\w[\w]+`/
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
-  CLOUDTYPES = %w(quarantine)
+  USER = 'JessicaLim8'
 
   def initialize(
     github_token:,
@@ -40,7 +43,7 @@ class Runner
       word = add_to_wordlist(word)
       generate_cloud
       message = "@#{@user} added '#{word}' to the Word Cloud"
-      octokit.add_label(label: CLOUDTYPES.last)
+      octokit.add_label(label: CloudTypes::CLOUDLABELS.last)
     else
       comment = "Sorry, the command 'wordcloud|#{command}' is not valid. Please try 'wordcloud|add|your-word' or 'wordcloud|shuffle'"
       octokit.error_notification(reaction: 'confused', comment: comment)
@@ -53,7 +56,67 @@ class Runner
     octokit.error_notification(reaction: 'confused', comment: comment, error: e)
   end
 
+
+  def test_cloud
+    message = "This is a test message"
+    if @development
+      puts message
+    else
+      `git add previous_clouds/`
+      `git diff`
+      `git config --global user.email "github-action-bot@example.com"`
+      `git config --global user.name "github-actions[bot]"`
+      `git commit -m "Add previous clouds" -a || echo "No changes to commit"`
+      `git push`
+    end
+    octokit.add_comment(comment: message)
+
+  rescue StandardError => e
+    comment = "Automatic Pull Request Comment could not be executed"
+    octokit.error_notification(reaction: 'confused', comment: comment, error: e)
+  end
+
+  def new_cloud
+    if @user == USER
+      move_old_cloud
+      create_new_cloud
+      if @development
+        File.write('comment.md', new_pr_comment)
+      else
+        octokit.add_comment(comment: new_pr_comment)
+      end
+    end
+
+  rescue StandardError => e
+    comment = "Automatic Pull Request Comment could not be executed"
+    octokit.error_notification(reaction: 'confused', comment: comment, error: e)
+  end
+
   private
+
+  def move_old_cloud
+    `mv wordcloud/wordcloud.png previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png`
+    `mv wordcloud/wordlist.txt previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.txt`
+    `touch wordcloud/wordlist.txt`
+    if @development
+      puts "Add #{CloudTypes::CLOUDLABELS[-2]}"
+    else
+      `git add previous_clouds/`
+      `git diff`
+      `git config --global user.email "github-action-bot@example.com"`
+      `git config --global user.name "github-actions[bot]"`
+      `git commit -m "Move #{CloudTypes::CLOUDLABELS[-2]} cloud" -a || echo "No changes to commit"`
+      `git push`
+    end
+  end
+
+  def create_new_cloud
+    new_words = octokit.get_pull_request.body.split.grep(PERSONAL_REGEX).join("\n")
+    File.write('wordcloud/wordlist.txt', new_words)
+    generate_cloud
+    write("New '#{CloudTypes::CLOUDLABELS.last}' word cloud generated")
+  end
+
   def add_to_wordlist(word)
     #Check valid word
     invalid_word_error if word.nil?
@@ -108,6 +171,10 @@ class Runner
 
   def to_markdown
     ReadmeGenerator.new(octokit: octokit).generate
+  end
+
+  def new_pr_comment
+    CommentGenerator.new(octokit: octokit).generate
   end
 
   def acknowledge_issue
