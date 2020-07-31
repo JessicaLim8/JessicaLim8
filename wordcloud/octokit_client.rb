@@ -42,6 +42,10 @@ class OctokitClient
     @octokit.update_contents(@repository, filepath, message, sha, content)
   end
 
+  def get_pull_request(issue_number: @issue_number)
+    @octokit.pull_request(@repository, issue_number)
+  end
+
   def issues(labels: 'wordcloud')
     @issues ||= @octokit.list_issues(
       @repository,

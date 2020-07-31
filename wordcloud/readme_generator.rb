@@ -1,8 +1,10 @@
+require_relative "./cloud_types"
+
 class ReadmeGenerator
   WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
-  CLOUDTYPES = %w(quarantine)
+  INITIAL_COUNT = 3
 
   def initialize(octokit:)
     @octokit = octokit
@@ -11,15 +13,15 @@ class ReadmeGenerator
   def generate
     participants = Hash.new(0)
     current_contributors = Hash.new(0)
-    total_words_added = 0
-    current_words_added = 0
-    total_clouds = CLOUDTYPES.length
+    current_words_added = INITIAL_COUNT
+    total_clouds = CloudTypes::CLOUDLABELS.length
+    total_words_added = INITIAL_COUNT * total_clouds
 
     octokit.issues.each do |issue|
       participants[issue.user.login] += 1
-      if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| CLOUDTYPES.include?(label.name) }
+      if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| CloudTypes::CLOUDLABELS.include?(label.name) }
         total_words_added += 1
-        if issue.labels.any? { |label| label.name == CLOUDTYPES.last }
+        if issue.labels.any? { |label| label.name == CloudTypes::CLOUDLABELS.last }
           current_words_added += 1
           current_contributors[issue.user.login] += 1
         end
@@ -52,7 +54,7 @@ class ReadmeGenerator
 
       <div align="center">
 
-        ## *Favourite Quarantine Passtime?* :lock: :tennis: :video_game:
+        ## #{CloudTypes::CLOUDPROMPTS.last}
 
         <img src="#{WORD_CLOUD_URL}" alt="WordCloud" width="100%">
 
@@ -68,13 +70,15 @@ class ReadmeGenerator
       markdown.concat("[![Github Badge](https://img.shields.io/badge/-@#{format_username(username)}-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/#{username})](https://github.com/#{username}) ")
     end
 
+    markdown.concat("Check out the last word cloud to see our community's [#{CloudTypes::CLOUDPROMPTS[-2]}](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 2}.png)")
+
     markdown.concat("</div>")
   end
 
   private
 
   def format_username(name)
-      name.gsub('-', '--')
+    name.gsub('-', '--')
   end
 
   attr_reader :octokit
