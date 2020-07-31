@@ -38,7 +38,7 @@ class CommentGenerator
       <img src="#{NEW_CLOUD_URL}" alt="WordCloud" width="100%">
     </div>
 
-    **Thanks to all the contributors**
+    **Thanks to everyone who added a word to the cloud**
 
     HTML
 
