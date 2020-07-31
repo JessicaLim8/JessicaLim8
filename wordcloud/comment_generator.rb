@@ -1,7 +1,7 @@
 require_relative "./cloud_types"
 
 class CommentGenerator
-  WORD_CLOUD_URL = 'https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png'
+  NEW_CLOUD_URL = "https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png"
   ADDWORD = 'add'
   SHUFFLECLOUD = 'shuffle'
   WORDS_INITALIZED = 3
@@ -35,7 +35,7 @@ class CommentGenerator
 
       ## #{CloudTypes::CLOUDPROMPTS[-2]}
 
-      <img src="#{"https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 2}.png"}}" alt="WordCloud" width="100%">
+      <img src="#{NEW_CLOUD_URL}" alt="WordCloud" width="100%">
     </div>
 
     #### Thanks to all the contributors
