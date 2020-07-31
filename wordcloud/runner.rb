@@ -60,7 +60,11 @@ class Runner
     if @user == USER
       move_old_cloud
       create_new_cloud
-      File.write('test.md', new_pr_comment)
+      if @development
+        File.write('comment.md', new_pr_comment)
+      else
+        octokit.add_comment(new_pr_comment)
+      end
     end
 
   rescue StandardError => e
@@ -69,6 +73,30 @@ class Runner
   end
 
   private
+
+  def move_old_cloud
+    `mv wordcloud/wordcloud.png previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png`
+    `mv wordcloud/wordlist.txt previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.txt`
+    `touch wordcloud/wordlist.txt`
+    if @development
+      puts "Add #{CloudTypes::CLOUDLABELS[-2]}"
+    else
+      `git add previous_clouds/`
+      `git diff`
+      `git config --global user.email "github-action-bot@example.com"`
+      `git config --global user.name "github-actions[bot]"`
+      `git commit -m "Move #{CloudTypes::CLOUDLABELS[-2]} cloud" -a || echo "No changes to commit"`
+      `git push`
+    end
+  end
+
+  def create_new_cloud
+    new_words = octokit.get_pull_request.body.split.grep(PERSONAL_REGEX).join("\n")
+    File.write('wordcloud/wordlist.txt', new_words)
+    generate_cloud
+    write("New '#{CloudTypes::CLOUDLABELS.last}' word cloud generated")
+  end
+
   def add_to_wordlist(word)
     #Check valid word
     invalid_word_error if word.nil?
@@ -89,18 +117,6 @@ class Runner
     word
   end
 
-  def move_old_cloud
-    `mv wordcloud/wordcloud.png previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png`
-    `mv wordcloud/wordlist.txt previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.txt`
-    `touch wordcloud/wordlist.txt`
-  end
-
-  def create_new_cloud
-    new_words = octokit.get_pull_request.body.split.grep(PERSONAL_REGEX).join("\n")
-    File.write('wordcloud/wordlist.txt', new_words)
-    generate_cloud
-    write("New '#{CloudTypes::CLOUDLABELS.last}' word cloud generated")
-  end
 
   def invalid_word_error
     # Invalid expression, did not pass regex
