@@ -70,7 +70,7 @@ class ReadmeGenerator
       markdown.concat("[![Github Badge](https://img.shields.io/badge/-@#{format_username(username)}-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/#{username})](https://github.com/#{username}) ")
     end
 
-    markdown.concat("Check out the last word cloud to see our community's [#{CloudTypes::CLOUDPROMPTS[-2]}](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 2}.png)")
+    #TODO: markdown.concat("Check out the last word cloud to see our community's [#{CloudTypes::CLOUDPROMPTS[-2]}](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 2}.png)")
 
     markdown.concat("</div>")
   end

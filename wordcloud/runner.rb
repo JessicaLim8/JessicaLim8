@@ -68,8 +68,12 @@ class Runner
       `git config --global user.name "github-actions[bot]"`
       `git commit -m "Add previous clouds" -a || echo "No changes to commit"`
       `git push`
-      octokit.add_comment(message)
     end
+    octokit.add_comment(comment: message)
+
+  rescue StandardError => e
+    comment = "Automatic Pull Request Comment could not be executed"
+    octokit.error_notification(reaction: 'confused', comment: comment, error: e)
   end
 
   def new_cloud
@@ -79,7 +83,7 @@ class Runner
       if @development
         File.write('comment.md', new_pr_comment)
       else
-        octokit.add_comment(new_pr_comment)
+        octokit.add_comment(comment: new_pr_comment)
       end
     end
 
