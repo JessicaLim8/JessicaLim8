@@ -1,4 +1,4 @@
 module CloudTypes
-  CLOUDLABELS = ["quarantine"]
-  CLOUDPROMPTS = ["Favourite Quarantine Passtime? :lock: :tennis: :video_game:"]
+  CLOUDLABELS = ["quarantine", "food"]
+  CLOUDPROMPTS = ["Favourite Quarantine Passtime? :lock: :tennis: :video_game:", "Favourite Food? :yum: :pizza: :cookie:"]
 end

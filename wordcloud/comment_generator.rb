@@ -23,8 +23,8 @@ class CommentGenerator
 
     markdown = <<~HTML
 
-    ## :cloud: :pencil: Thanks for participating in our latest community word cloud!
-    **:star2: To keep contributing [add another word](https://github.com/JessicaLim8) to the NEW word cloud :fire:**
+    ## :cloud: :pencil2: Thanks for participating in our latest community word cloud!
+    **:star2: Enjoyed yourself? [Add a word](https://github.com/JessicaLim8) to the NEW word cloud :fire:**
 
     ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20#{CloudTypes::CLOUDLABELS[-2]}%20cloud-#{current_words_added}-informational?labelColor=7D898B)
     ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20in%20#{CloudTypes::CLOUDLABELS[-2]}%20cloud-#{current_contributors.size}-blueviolet?labelColor=7D898B)
@@ -38,7 +38,7 @@ class CommentGenerator
       <img src="#{NEW_CLOUD_URL}" alt="WordCloud" width="100%">
     </div>
 
-    **Thanks to everyone who added a word to the cloud**
+    ### Thanks to everyone who added a word to the cloud
 
     HTML
 
