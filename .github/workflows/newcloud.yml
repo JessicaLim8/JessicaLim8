@@ -34,7 +34,7 @@ jobs:
         gem install octokit -N --silent
         pip install wordcloud
 
-    - name: Generate new cloud
+    - name: New Word Cloud Generation
       run: |
         ruby <<- EORUBY
           require './wordcloud/runner'
