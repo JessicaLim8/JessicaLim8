@@ -11,7 +11,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-56-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-57-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-2-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-36-AC6EFF?labelColor=7D898B)
 
@@ -27,10 +27,10 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
   <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png" alt="WordCloud" width="100%">
 
-  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-9-informational?labelColor=7D898B)
-  ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-6-blueviolet?labelColor=7D898B)
+  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-10-informational?labelColor=7D898B)
+  ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-7-blueviolet?labelColor=7D898B)
 
 
-[![Github Badge](https://img.shields.io/badge/-@JessicaLim8-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JessicaLim8)](https://github.com/JessicaLim8) [![Github Badge](https://img.shields.io/badge/-@ApoorvTyagi-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/ApoorvTyagi)](https://github.com/ApoorvTyagi) [![Github Badge](https://img.shields.io/badge/-@souravatta-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/souravatta)](https://github.com/souravatta) [![Github Badge](https://img.shields.io/badge/-@JonathanGin52-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JonathanGin52)](https://github.com/JonathanGin52) [![Github Badge](https://img.shields.io/badge/-@MaanavD-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/MaanavD)](https://github.com/MaanavD) [![Github Badge](https://img.shields.io/badge/-@TanZng-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/TanZng)](https://github.com/TanZng) 
+[![Github Badge](https://img.shields.io/badge/-@JessicaLim8-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JessicaLim8)](https://github.com/JessicaLim8) [![Github Badge](https://img.shields.io/badge/-@RowanAldean-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/RowanAldean)](https://github.com/RowanAldean) [![Github Badge](https://img.shields.io/badge/-@ApoorvTyagi-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/ApoorvTyagi)](https://github.com/ApoorvTyagi) [![Github Badge](https://img.shields.io/badge/-@souravatta-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/souravatta)](https://github.com/souravatta) [![Github Badge](https://img.shields.io/badge/-@JonathanGin52-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JonathanGin52)](https://github.com/JonathanGin52) [![Github Badge](https://img.shields.io/badge/-@MaanavD-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/MaanavD)](https://github.com/MaanavD) [![Github Badge](https://img.shields.io/badge/-@TanZng-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/TanZng)](https://github.com/TanZng) 
 
  Check out the [previous word cloud](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/quarantine_cloud1.png) to see our community's **Favourite Quarantine Passtime? :lock: :tennis: :video_game:**</div>
