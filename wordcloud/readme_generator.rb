@@ -18,9 +18,6 @@ class ReadmeGenerator
     total_clouds = CloudTypes::CLOUDLABELS.length
     total_words_added = INITIAL_COUNT * total_clouds
 
-    participants[USER] += 1
-    current_contributors[USER] += 1
-
     octokit.issues.each do |issue|
       participants[issue.user.login] += 1
       if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| CloudTypes::CLOUDLABELS.include?(label.name) }
