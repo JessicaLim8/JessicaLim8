@@ -8,7 +8,6 @@ mochi
 omg
 ApoorvTyagi
 python
-Join the Community Word Cloud
 chandan
 unbelievable
 Ice Cream and Cookies
@@ -25,5 +24,4 @@ Tacos
 eagleanurag
 muffins
 Spaghetti
-google-me-eagleanurag
 pho-soup
