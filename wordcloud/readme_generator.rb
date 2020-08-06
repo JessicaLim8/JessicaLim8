@@ -75,7 +75,7 @@ class ReadmeGenerator
 
     markdown.concat("</div>")
 
-    markdown.concat("\n\n ### Need inspiration for your own README? Check out [How to Make Your GitHub Profile Shine](https://medium.com/swlh/how-to-make-your-github-profile-shine-using-profile-readmes-2405a742393c?source=friends_link&sk=0f09b70fe83bb4a3b23bcb8604a51d22A)")
+    markdown.concat("\n\n ### Need inspiration for your own README? Check out [How to Make Your GitHub Profile Shine](https://medium.com/swlh/how-to-make-your-github-profile-shine-using-profile-readmes-2405a742393c?source=friends_link&sk=0f09b70fe83bb4a3b23bcb8604a51d22A)!")
   end
 
   private
@@ -85,8 +85,8 @@ class ReadmeGenerator
   end
 
   def previous_cloud_url
-    url_end = CloudTypes::CLOUDPROMPTS[-2].gsub(' ', '-').gsub(':', '')
-    "https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/previous_clouds##{url_end}"
+    url_end = CloudTypes::CLOUDPROMPTS[-2].gsub(' ', '-').gsub(':', '').gsub('?', '').downcase
+    "https://github.com/JessicaLim8/JessicaLim8/blob/master/previous_clouds/previous_clouds.md##{url_end}"
   end
 
   attr_reader :octokit
