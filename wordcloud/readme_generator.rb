@@ -71,15 +71,22 @@ class ReadmeGenerator
       markdown.concat("[![Github Badge](https://img.shields.io/badge/-@#{format_username(username)}-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/#{username})](https://github.com/#{username}) ")
     end
 
-    markdown.concat("\n\n Check out the [previous word cloud](https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png) to see our community's **#{CloudTypes::CLOUDPROMPTS[-2]}**")
+    markdown.concat("\n\n Check out the [previous word cloud](#{previous_cloud_url}) to see our community's **#{CloudTypes::CLOUDPROMPTS[-2]}**")
 
     markdown.concat("</div>")
+
+    markdown.concat("\n\n ### Need inspiration for your own README? Check out [How to Make Your GitHub Profile Shine](https://medium.com/swlh/how-to-make-your-github-profile-shine-using-profile-readmes-2405a742393c?source=friends_link&sk=0f09b70fe83bb4a3b23bcb8604a51d22A)")
   end
 
   private
 
   def format_username(name)
     name.gsub('-', '--')
+  end
+
+  def previous_cloud_url
+    url_end = CloudTypes::CLOUDPROMPTS[-2].gsub(' ', '-').gsub(':', '')
+    "https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/previous_clouds/previous_clouds##{url_end}"
   end
 
   attr_reader :octokit
