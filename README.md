@@ -13,7 +13,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ![](https://img.shields.io/badge/Words%20Added-81-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-2-48D6FF?labelColor=7D898B)
-![](https://img.shields.io/badge/Total%20Participants-50-AC6EFF?labelColor=7D898B)
+![](https://img.shields.io/badge/Total%20Participants-51-AC6EFF?labelColor=7D898B)
 
 ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7Cadd%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
 
@@ -35,4 +35,4 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
  Check out the [previous word cloud](https://github.com/JessicaLim8/JessicaLim8/blob/master/previous_clouds/previous_clouds.md#favourite-quarantine-passtime-lock-tennis-video_game) to see our community's **Favourite Quarantine Passtime? :lock: :tennis: :video_game:**</div>
 
- ### Need inspiration for your own README? Check out [How to Make Your GitHub Profile Shine](https://medium.com/swlh/how-to-make-your-github-profile-shine-using-profile-readmes-2405a742393c?source=friends_link&sk=0f09b70fe83bb4a3b23bcb8604a51d22A)!
+ ### Need inspiration for your own README? Check out [How to Stand out on GitHub using Profile READMEs](https://medium.com/better-programming/how-to-stand-out-on-github-with-profile-readmes-dfd2102a3490?source=friends_link&sk=61df9c4b63b329ad95528b8d7c00061f)
