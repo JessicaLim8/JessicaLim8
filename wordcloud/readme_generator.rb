@@ -75,7 +75,7 @@ class ReadmeGenerator
 
     markdown.concat("</div>")
 
-    markdown.concat("\n\n ### Need inspiration for your own README? Check out [How to Make Your GitHub Profile Shine](https://medium.com/swlh/how-to-make-your-github-profile-shine-using-profile-readmes-2405a742393c?source=friends_link&sk=0f09b70fe83bb4a3b23bcb8604a51d22A)!")
+    markdown.concat("\n\n ### Need inspiration for your own README? Check out [How to Stand out on GitHub using Profile READMEs](https://medium.com/better-programming/how-to-stand-out-on-github-with-profile-readmes-dfd2102a3490?source=friends_link&sk=61df9c4b63b329ad95528b8d7c00061f)
   end
 
   private
