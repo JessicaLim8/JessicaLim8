@@ -1,4 +1,4 @@
-Just replace <INSERT-WORD> with your word - don't remove the *wordcloud|add|*
+Just replace <INSERT-WORD> with your word - don't remove the `wordcloud|add|`   
 Next click 'Submit new issue'
 
 **Note: Please give the wordcloud a few minutes to update as Github sometimes caches images :hourglass:**  
