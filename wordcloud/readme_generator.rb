@@ -47,11 +47,11 @@ class ReadmeGenerator
       ![](https://img.shields.io/badge/Word%20Clouds%20Created-#{total_clouds}-48D6FF?labelColor=7D898B)
       ![](https://img.shields.io/badge/Total%20Participants-#{participants.size}-AC6EFF?labelColor=7D898B)
 
-      ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C#{ADDWORD}%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27) to see the word cloud update in real time :rocket:
+      ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?template=addword.md&title=wordcloud%7C#{ADDWORD}%7C%3CINSERT-WORD%3E) to see the word cloud update in real time :rocket:
 
-      A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C#{ADDWORD}%7C%3Cinsert-word%3E&body=Just+replace+%3Cinsert-word%3E+with+your+word!%0D%0ANext+click+%27Submit+new+issue%27). The prompt will change frequently, so be sure to come back and check it out :relaxed:
+      A new word cloud will be automatically generated when you [add your own word](https://github.com/JessicaLim8/JessicaLim8/issues/new?template=addword.md&title=wordcloud%7C#{ADDWORD}%7C%3CINSERT-WORD%3E). The prompt will change frequently, so be sure to come back and check it out :relaxed:
 
-      :star2: Don't like the arrangement of the current word cloud? [Regenerate it](https://github.com/JessicaLim8/JessicaLim8/issues/new?title=wordcloud%7C#{SHUFFLECLOUD}&body=Just+click+%27Submit+new+issue%27%0D%0AYou+do+not+need+to+do+anything+else) :game_die:
+      :star2: Don't like the arrangement of the current word cloud? [Regenerate it](https://github.com/JessicaLim8/JessicaLim8/issues/new?template=shufflecloud.md&title=wordcloud%7C#{SHUFFLECLOUD}) :game_die:
 
       <div align="center">
 
