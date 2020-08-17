@@ -14,7 +14,7 @@ class CloudScrollGenerator
 
     octokit.issues.each do |issue|
       if issue.title.split('|')[1] != SHUFFLECLOUD && issue.labels.any? { |label| CloudTypes::CLOUDLABELS.include?(label.name) }
-        if issue.labels.any? { |label| label.name == CloudTypes::CLOUDLABELS.last }
+        if issue.labels.any? { |label| label.name == CloudTypes::CLOUDLABELS[-2] }
           current_words_added += 1
           current_contributors[issue.user.login] += 1
         end
