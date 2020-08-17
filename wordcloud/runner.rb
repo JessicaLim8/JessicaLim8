@@ -1,6 +1,7 @@
 ##imports
 require_relative "./readme_generator"
 require_relative "./comment_generator"
+require_relative "./cloud_scroll_generator"
 require_relative "./octokit_client"
 require_relative "./cloud_types"
 
@@ -65,6 +66,9 @@ class Runner
       else
         octokit.add_comment(comment: new_pr_comment)
       end
+      File.open('previous_clouds/previous_clouds.md', 'a') { |f|
+        f.puts add_to_cloud_scroll
+      }
     end
 
   rescue StandardError => e
@@ -155,6 +159,10 @@ class Runner
 
   def new_pr_comment
     CommentGenerator.new(octokit: octokit).generate
+  end
+
+  def add_to_cloud_scroll
+    CloudScrollGenerator.new(octokit: octokit).generate
   end
 
   def acknowledge_issue
