@@ -11,7 +11,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-114-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-115-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-3-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-63-AC6EFF?labelColor=7D898B)
 
@@ -27,11 +27,11 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
   <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png" alt="WordCloud" width="100%">
 
-  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-7-informational?labelColor=7D898B)
-  ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-2-blueviolet?labelColor=7D898B)
+  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-8-informational?labelColor=7D898B)
+  ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-3-blueviolet?labelColor=7D898B)
 
 
-[![Github Badge](https://img.shields.io/badge/-@Hans5958-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/Hans5958)](https://github.com/Hans5958) [![Github Badge](https://img.shields.io/badge/-@JonathanGin52-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JonathanGin52)](https://github.com/JonathanGin52) 
+[![Github Badge](https://img.shields.io/badge/-@motiontx-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/motiontx)](https://github.com/motiontx) [![Github Badge](https://img.shields.io/badge/-@Hans5958-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/Hans5958)](https://github.com/Hans5958) [![Github Badge](https://img.shields.io/badge/-@JonathanGin52-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JonathanGin52)](https://github.com/JonathanGin52) 
 
  Check out the [previous word cloud](https://github.com/JessicaLim8/JessicaLim8/blob/master/previous_clouds/previous_clouds.md#favourite-food-yum-pizza-cookie) to see our community's **Favourite Food? :yum: :pizza: :cookie:**</div>
 
