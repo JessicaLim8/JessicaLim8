@@ -7,3 +7,4 @@ Microsoft
 Mercado Libre
 Apple
 Patagonia
+spotify
