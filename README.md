@@ -11,7 +11,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-124-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-125-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-3-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-65-AC6EFF?labelColor=7D898B)
 
