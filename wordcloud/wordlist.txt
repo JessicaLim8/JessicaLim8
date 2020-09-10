@@ -35,3 +35,4 @@ machine learning
 Coffee
 uttarakhand
 everis
+typescript
