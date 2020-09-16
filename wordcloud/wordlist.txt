@@ -38,3 +38,4 @@ everis
 typescript
 GITHUB
 tableau
+RSIC-V
