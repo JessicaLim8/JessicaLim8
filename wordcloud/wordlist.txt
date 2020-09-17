@@ -40,3 +40,4 @@ GITHUB
 tableau
 RSIC-V
 Tesla
+Stripe
