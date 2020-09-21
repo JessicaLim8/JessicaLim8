@@ -41,3 +41,4 @@ tableau
 RSIC-V
 Tesla
 Stripe
+Merck Group
