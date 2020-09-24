@@ -44,3 +44,4 @@ Stripe
 Merck Group
 Mojang
 Massive
+microsoft
