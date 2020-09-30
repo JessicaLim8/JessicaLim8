@@ -45,3 +45,4 @@ Merck Group
 Mojang
 Massive
 microsoft
+HacktoberFest
