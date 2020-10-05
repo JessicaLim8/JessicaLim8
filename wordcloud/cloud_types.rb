@@ -3,7 +3,7 @@ module CloudTypes
     "quarantine",
     "food",
     "company",
-    "podcasts",
+    "podcast",
   ]
 
   CLOUDPROMPTS = [
