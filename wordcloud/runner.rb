@@ -59,9 +59,7 @@ class Runner
 
   def new_cloud
     if @user == USER
-      File.open('previous_clouds/previous_clouds.md', 'a') { |f|
-        f.puts add_to_cloud_scroll
-      }
+      File.open('previous_clouds/previous_clouds.md', 'a') { |f| f.puts add_to_cloud_scroll }
       move_old_cloud
       create_new_cloud
       if @development
@@ -70,7 +68,6 @@ class Runner
         octokit.add_comment(comment: new_pr_comment)
       end
     end
-
   rescue StandardError => e
     comment = "Automatic Pull Request Comment could not be executed"
     octokit.error_notification(reaction: 'confused', comment: comment, error: e)
@@ -102,26 +99,25 @@ class Runner
   end
 
   def add_to_wordlist(word)
-    #Check valid word
-    invalid_word_error if word.nil?
-    if word[REGEX_PATTERN] != word
+    # Check valid word
+    raise_invalid_word_error if word.nil?
+
+    unless word[REGEX_PATTERN] == word
       if word[REGEX_PATTERN] == word[1..-2] && word[1..-2].length > 2 && word[0] == "<" && word[-1] == ">"
         word = word[1..-2].downcase
       else
-        invalid_word_error
+        raise_invalid_word_error
       end
     end
 
     # Check for spaces
     word = word.gsub("_", " ")
     # Add word to list
-    File.open('wordcloud/wordlist.txt', 'a') do |f|
-      f.puts word
-    end
+    File.open('wordcloud/wordlist.txt', 'a') { |f| f.puts word }
     word
   end
 
-  def invalid_word_error
+  def raise_invalid_word_error
     # Invalid expression, did not pass regex
     comment = "Sorry, your word was not valid. Please use valid alphanueric characters, spaces, apostrophes or underscores only"
     octokit.error_notification(reaction: 'confused', comment: comment)
@@ -129,7 +125,7 @@ class Runner
 
   def generate_cloud
     # Create new word cloud
-    result = system('sort -R wordcloud/wordlist.txt | wordcloud_cli --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' !?#@+-.]+" --no_collocations --min_font_size 10 --max_font_size 120')
+    result = system('sort -uR wordcloud/wordlist.txt | wordcloud_cli --imagefile wordcloud/wordcloud.png --prefer_horizontal 0.5 --repeat --fontfile wordcloud/Montserrat-Bold.otf --background white --colormask images/colourMask.jpg --width 700 --height 400 --regexp "\w[\w\' !?#@+-.]+" --no_collocations --min_font_size 10 --max_font_size 120')
     # Failed cloud generation
     unless result
       comment = "Sorry, something went wrong... the word cloud did not update :("
