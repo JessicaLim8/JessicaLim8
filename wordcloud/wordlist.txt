@@ -20,3 +20,4 @@ Numberphile
 kubernetes
 docker
 idea millonaria
+DevNews
