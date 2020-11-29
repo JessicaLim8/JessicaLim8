@@ -21,3 +21,4 @@ kubernetes
 docker
 idea millonaria
 DevNews
+ohmyscript
