@@ -22,3 +22,4 @@ docker
 idea millonaria
 DevNews
 ohmyscript
+Gurpreet Singh
