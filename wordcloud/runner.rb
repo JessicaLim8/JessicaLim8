@@ -58,16 +58,13 @@ class Runner
   end
 
   def new_cloud
-    puts 'I am here'
-    puts @user
     if @user == USER
-      puts 'Authenticated'
-      File.open('previous_clouds/previous_clouds.md', 'a') do |f|
+      File.open('previous_clouds/previous_clouds.md', 'a') { |f|
         f.puts add_to_cloud_scroll
-      end
+      }
       move_old_cloud
       create_new_cloud
-      if true
+      if @development
         File.write('comment.md', new_pr_comment)
       else
         octokit.add_comment(comment: new_pr_comment)
@@ -82,7 +79,6 @@ class Runner
   private
 
   def move_old_cloud
-    puts "#{CloudTypes::CLOUDLABELS}"
     `mv wordcloud/wordcloud.png previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.png`
     `mv wordcloud/wordlist.txt previous_clouds/#{CloudTypes::CLOUDLABELS[-2]}_cloud#{CloudTypes::CLOUDLABELS.size - 1}.txt`
     `touch wordcloud/wordlist.txt`
