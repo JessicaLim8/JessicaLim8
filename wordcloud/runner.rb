@@ -59,9 +59,9 @@ class Runner
 
   def new_cloud
     if @user == USER
-      File.open('previous_clouds/previous_clouds.md', 'a') { |f|
+      File.open('previous_clouds/previous_clouds.md', 'a') do |f|
         f.puts add_to_cloud_scroll
-      }
+      end
       move_old_cloud
       create_new_cloud
       if @development

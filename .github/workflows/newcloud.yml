@@ -32,7 +32,7 @@ jobs:
       env:
         REPOSITORY: ${{ github.repository }}
         EVENT_PR_NUMBER: ${{ github.event.pull_request.number }}
-        EVENT_USER_LOGIN: ${{ github.event.issue.user.login }}
+        EVENT_USER_LOGIN: ${{ github.event.pull_request.user.login }}
         EVENT_PR_TITLE: ${{ github.event.pull_request.title }}
       run: |
         ruby <<- EORUBY
