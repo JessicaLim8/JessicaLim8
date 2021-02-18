@@ -25,3 +25,4 @@ rust
 hackathons
 bharat mata ki jai
 Professional growth
+script kiddie
