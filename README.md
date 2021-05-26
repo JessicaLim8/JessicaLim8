@@ -13,7 +13,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ![](https://img.shields.io/badge/Words%20Added-266-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-5-48D6FF?labelColor=7D898B)
-![](https://img.shields.io/badge/Total%20Participants-189-AC6EFF?labelColor=7D898B)
+![](https://img.shields.io/badge/Total%20Participants-190-AC6EFF?labelColor=7D898B)
 
 ### :thought_balloon: [Add a word](https://github.com/JessicaLim8/JessicaLim8/issues/new?template=addword.md&title=wordcloud%7Cadd%7C%3CINSERT-WORD%3E) to see the word cloud update in real time :rocket:
 
