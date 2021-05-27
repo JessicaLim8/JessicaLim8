@@ -64,3 +64,4 @@ sup
 repl
 typescript
 socializing
+college
