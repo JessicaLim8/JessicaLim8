@@ -83,3 +83,4 @@ Foo-Bar
 Health
 Love
 Peace
+be-hardworking
