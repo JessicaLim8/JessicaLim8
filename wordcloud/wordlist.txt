@@ -84,3 +84,4 @@ Health
 Love
 Peace
 be-hardworking
+be-determined
