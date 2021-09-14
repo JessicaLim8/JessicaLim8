@@ -11,7 +11,7 @@ Welcome to my profile! I'm a student interning @Microsoft, an aspiring [writer](
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-325-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-326-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-5-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-240-AC6EFF?labelColor=7D898B)
 
@@ -27,7 +27,7 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
   <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png" alt="WordCloud" width="100%">
 
-  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-126-informational?labelColor=7D898B)
+  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-127-informational?labelColor=7D898B)
   ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-105-blueviolet?labelColor=7D898B)
 
 
