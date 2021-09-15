@@ -27,7 +27,7 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
   <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png" alt="WordCloud" width="100%">
 
-  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-127-informational?labelColor=7D898B)
+  ![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-126-informational?labelColor=7D898B)
   ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-105-blueviolet?labelColor=7D898B)
 
 
