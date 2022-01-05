@@ -33,9 +33,7 @@ ankit OP
 Python
 hey
 amazing
-insert-word
 penguins rule
-insert-word
 Hope
 cloud
 doing more hackathons
@@ -113,7 +111,6 @@ contributing
 anime
 git
 yeet
-insert-word
 Aaryan Bizoara
 Existing
 chess
