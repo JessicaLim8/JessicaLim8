@@ -12,7 +12,7 @@ Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jes
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-370-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-371-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-6-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-280-AC6EFF?labelColor=7D898B)
 
@@ -28,7 +28,7 @@ A new word cloud will be automatically generated when you [add your own word](ht
 
 <img src="https://raw.githubusercontent.com/JessicaLim8/JessicaLim8/master/wordcloud/wordcloud.png" alt="WordCloud" width="100%">
 
-![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-15-informational?labelColor=7D898B)
+![Word Cloud Words Badge](https://img.shields.io/badge/Words%20in%20this%20Cloud-16-informational?labelColor=7D898B)
 ![Word Cloud Contributors Badge](https://img.shields.io/badge/Contributors%20this%20Cloud-10-blueviolet?labelColor=7D898B)
 
 [![Github Badge](https://img.shields.io/badge/-@sumeshir26-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/sumeshir26)](https://github.com/sumeshir26) [![Github Badge](https://img.shields.io/badge/-@crxssed7-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/crxssed7)](https://github.com/crxssed7) [![Github Badge](https://img.shields.io/badge/-@JohnPalmgren-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JohnPalmgren)](https://github.com/JohnPalmgren) [![Github Badge](https://img.shields.io/badge/-@kstamp232-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/kstamp232)](https://github.com/kstamp232) [![Github Badge](https://img.shields.io/badge/-@DalpatRathore-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/DalpatRathore)](https://github.com/DalpatRathore) [![Github Badge](https://img.shields.io/badge/-@ashleighrene-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/ashleighrene)](https://github.com/ashleighrene) [![Github Badge](https://img.shields.io/badge/-@vyshnovka-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/vyshnovka)](https://github.com/vyshnovka) [![Github Badge](https://img.shields.io/badge/-@Carol42-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/Carol42)](https://github.com/Carol42) [![Github Badge](https://img.shields.io/badge/-@JayantGoel001-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JayantGoel001)](https://github.com/JayantGoel001) [![Github Badge](https://img.shields.io/badge/-@JessicaLim8-24292e?style=flat&logo=Github&logoColor=white&link=https://github.com/JessicaLim8)](https://github.com/JessicaLim8) 
