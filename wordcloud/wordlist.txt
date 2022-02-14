@@ -26,3 +26,4 @@ Miami
 Japan
 regensburg
 world
+tamarindo
