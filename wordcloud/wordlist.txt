@@ -36,3 +36,4 @@ Ingenuity Brain
 Bandung
 insert-word
 SEXY
+FREEDOM
