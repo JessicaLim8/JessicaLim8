@@ -38,3 +38,4 @@ insert-word
 SEXY
 FREEDOM
 opensource
+Solomon Shalom Lijo
