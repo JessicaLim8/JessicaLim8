@@ -71,3 +71,4 @@ bora bora
 brasil
 warsaw
 hope
+rust
