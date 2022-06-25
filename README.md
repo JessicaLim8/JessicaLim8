@@ -12,7 +12,7 @@ Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jes
 
 ## Join the Community Word Cloud :cloud: :pencil2:
 
-![](https://img.shields.io/badge/Words%20Added-440-brightgreen?labelColor=7D898B)
+![](https://img.shields.io/badge/Words%20Added-439-brightgreen?labelColor=7D898B)
 ![](https://img.shields.io/badge/Word%20Clouds%20Created-6-48D6FF?labelColor=7D898B)
 ![](https://img.shields.io/badge/Total%20Participants-340-AC6EFF?labelColor=7D898B)
 
