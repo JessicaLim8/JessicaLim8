@@ -86,3 +86,4 @@ HAWAII
 Finland
 loveyouall
 hello-world
+whonix
