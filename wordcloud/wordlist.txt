@@ -89,3 +89,4 @@ hello-world
 whonix
 New Zealand
 brasil
+Japan
