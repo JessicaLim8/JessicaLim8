@@ -90,3 +90,4 @@ whonix
 New Zealand
 brasil
 Japan
+greenland
