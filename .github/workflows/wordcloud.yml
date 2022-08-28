@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        gem install octokit -N --silent
+        gem install octokit -v 4.25.0
         pip install wordcloud
 
     - name: Generate New Word Cloud
