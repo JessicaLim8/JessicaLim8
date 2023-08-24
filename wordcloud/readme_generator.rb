@@ -39,7 +39,7 @@ class ReadmeGenerator
 [![Instagram Badge](https://img.shields.io/badge/-@__jessicaalim-purple?style=flat&logo=instagram&logoColor=white&link=https://instagram.com/_jessicaalim/)](https://instagram.com/_jessicaalim)
 [![Gmail Badge](https://img.shields.io/badge/-jessicalim813-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:jessicalim813@gmail.com)](mailto:jessicalim813@gmail.com)
 
-Welcome to my profile! I'm a student, aspiring [writer](https://medium.com/@_jessicalim), part-time coder and full-time adventure seeker. I am current interning @Wealthsimple, and have previously PM'd @Autodesk, SWE'd @Microsoft, and UX&D consulted @Deloitte. Thanks for visiting and I'd love to [connect](https://www.linkedin.com/in/jlim/)!
+Welcome to my profile! I am a Canadian :Canada: working in Hong Kong. I spend my time developing tech to help Olympic athletes, [writing](https://medium.com/@_jessicalim), and hiking :seedling:. I have previously PM'd @Autodesk, SWE'd @Microsoft & @Wealthsimple, and UX&D consulted @Deloitte. Thanks for visiting and I'd love to [connect](https://www.linkedin.com/in/jlim/)!
 
 
 ## Join the Community Word Cloud :cloud: :pencil2:
