@@ -1,4 +1,6 @@
 require 'octokit'
+require 'faraday' 
+require 'octokit/client/issues'
 
 class OctokitClient
   PREVIEW_HEADERS = [
