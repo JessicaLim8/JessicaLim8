@@ -26,6 +26,8 @@ jobs:
     - name: Install dependencies
       run: |
         gem install octokit -N --silent
+        gem install faraday -N --silent
+        gem install faraday-retry -N --silent
         pip install wordcloud
 
     - name: Generate New Word Cloud
@@ -45,5 +47,4 @@ jobs:
             repository: ENV.fetch('REPOSITORY'),
             user: ENV.fetch('EVENT_USER_LOGIN'),
           ).run
-
         EORUBY
